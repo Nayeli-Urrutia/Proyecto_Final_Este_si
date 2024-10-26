@@ -1,11 +1,14 @@
 <resources>
-    <string name="app_name">Proyecto_Final</string>
+    <string name="app_name">Tu Nombre de Aplicación</string>
     <string name="btn_pedir">Pedir</string>
     <string name="btn_Listo">Listo</string>
-
-    <string name="textTitulo">MENÚ</string>
-    <string name="textSubtitulo">Tipos de Hamburguesas</string>
+    <string name="et_nombre">Nombre</string>
+    <string name="hint_telefono">Número de Teléfono</string>
+    <string name="hint_email">Email</string>
+    <string name="btn_foto_description">Botón para tomar fotografía</string>
+    <string name="iv_foto_description">Descripción de la imagen</string>
+    <string name="btn_ubicacion_text">Ingresar Ubicación</string>
+    <string name="map_description">Mapa para mostrar ubicación</string>
+    <string name="btn_comprobante_pdf_text">Confirmar Pedido</string>
+    <string name="btn_comprobante_pdf_description">Botón para generar comprobante PDF</string>
 </resources>
-
-
-

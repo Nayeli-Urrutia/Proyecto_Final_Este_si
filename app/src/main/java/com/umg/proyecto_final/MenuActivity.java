@@ -1,6 +1,7 @@
 package com.umg.proyecto_final;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.widget.Button;
@@ -10,7 +11,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.umg.proyecto_final.BaseDatos.DbHelper;
-import com.umg.proyecto_final.BaseDatos.Entidades.Hamburguesas;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,6 +27,14 @@ public class MenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
+        Button btn_Listo;
+
+        btn_Listo = findViewById(R.id.btn_Listo);
+        btn_Listo.setOnClickListener(view -> {
+            Intent intent = new Intent(MenuActivity.this, DatosActivity.class);
+            startActivity(intent);
+        });
 
         expandableListView = findViewById(R.id.expandableListView);
         listaCategorias = new ArrayList<>();
@@ -69,9 +77,7 @@ public class MenuActivity extends AppCompatActivity {
             return false;
         });
 
-        // Botón de Listo
-        Button btnListo = findViewById(R.id.btn_Listo);
-        btnListo.setOnClickListener(v -> Toast.makeText(this, "Pedido completado", Toast.LENGTH_SHORT).show());
+
     }
 
     // Método para guardar el producto seleccionado en la base de datos
@@ -93,7 +99,9 @@ public class MenuActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Error al guardar", Toast.LENGTH_SHORT).show();
         }
+
+
         db.close();
     }
-}
 
+}
